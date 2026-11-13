@@ -1,0 +1,9 @@
+@import "reset.css";
+
+:root {
+    --teal-warm-subtle: hsl(139 51.2% 48.8%);
+}
+
+body {
+    background-color: var(--teal-warm-subtle);
+}
