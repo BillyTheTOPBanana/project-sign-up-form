@@ -44,9 +44,37 @@ body {
   background-color: lightgray;
 }
 
-#main-content {
-  width: 1024px;
-  height:100px;
+#main {
+  width: 1440px;
+  height: 100vh;
   margin: 0 auto;
+  
   background-color: white;
+
+  display: flex;
+}
+
+#main-left {
+  --native-image-width: 536px;
+  background-image: url("img/tall-rect-fish-blue-and-orange.png");
+  width: var(--native-image-width);
+
+  flex: none;
+}
+
+#main-right {
+  display: flex;
+  flex-direction: column;
+}
+
+#form-area {
+  height: 500px;
+  background-color: teal;
+
+  flex: none;
+}
+
+#main-right-top,
+#main-right-bottom {
+  flex: auto;
 }
