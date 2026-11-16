@@ -1,9 +1,23 @@
+/*
+*
+* As of 11/16/26, this reset-and-normalize is created by
+* pulling lines that I find useful from an article by Matt Brictson:
+* https://mattbrictson.com/blog/css-normalize-and-reset
+* He imports modern-normalize.css and adds a few of his own lines--
+* I am pulling from both.
+*
+*/
+
 :root {
   box-sizing: border-box;
 }
 
 :root {
   line-height: 1.3;
+}
+
+body {
+  margin: 0;
 }
 
 h1, h2, h3, h4, h5, figure, p, ol, ul {
