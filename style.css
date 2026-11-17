@@ -1,7 +1,8 @@
 @import "import/reset.css";
 
 :root {
-    --teal-warm-subtle: hsl(139 51.2% 48.8%);
+  --teal-warm-subtle: hsl(139 51.2% 48.8%);
+  --offwhite-blue: hsl(222 68.5% 91.5%);
 }
 
 .pompiere-regular {
@@ -56,10 +57,53 @@ body {
 
 #main-left {
   --native-image-width: 536px;
-  background-image: url("img/tall-rect-fish-blue-and-orange.png");
   width: var(--native-image-width);
 
   flex: none;
+
+  position: relative;
+}
+
+#main-left > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: left top;
+}
+
+.banner-caption {
+  position: absolute;
+  top: 20%;
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  --transparent-black: #00000077;
+  background-color: var(--transparent-black);
+}
+
+.banner-caption > img {
+  height: 140px;
+}
+
+.banner-caption > span {
+  color: var(--offwhite-blue);
+  font-family: "Life Savers";
+  font-size: 4rem;
+  position: relative;
+  top: .3rem;
+}
+
+.photo-credit {
+  position: absolute;
+  bottom: 20px;
+  color: var(--offwhite-blue);
+  font-size: .8rem;
+  
+  width: 100%;
+  text-align: center;
 }
 
 #main-right {

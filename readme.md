@@ -8,3 +8,8 @@ This project is designed to *look good* on resolutions close to 1080p, and *be f
 fish photo
 - The image is released free of copyrights under Creative Commons CC0.
 - Obtained from https://worldwideaquaculture.com/10-amazing-sea-creatures-around-the-world/
+- cropped
+wave icon
+- source image "Wave" obatined from https://icons8.com/
+- converted to SVG at https://pngtosvg.com
+- colors altered
