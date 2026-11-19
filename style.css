@@ -1,8 +1,20 @@
 @import "import/reset.css";
 
 :root {
-  --teal-warm-subtle: hsl(139 51.2% 48.8%);
-  --offwhite-blue: hsl(222 68.5% 91.5%);
+  --dark-gray: hsl(0 0 27%);
+  --ocean-blue-light: hsl(191, 98%, 78%);
+  --ocean-blue-gray: hsl(191, 58%, 38%);
+  --ocean-blue-bright: hsl(191, 88%, 50%);
+  --ocean-blue-deep: hsl(195, 100%, 20%);
+  --fishy-orange: hsl(30 100% 45%);
+  --offwhite-blue: hsl(222 50% 91%);
+  --focused-blue:  hsl(222 75% 30%);
+  --invalid-red: hsl(0 95% 70%);
+  --offwhite-very-pale-blue: hsl(222 50% 98%);
+  --offwhite: hsl(0 0 97%);
+  --gray-shadow: hsl(0 0 60% / .3);
+
+  --section-padding: 40px;
 }
 
 .pompiere-regular {
@@ -43,6 +55,8 @@
 
 body {
   background-color: lightgray;
+  color: var(--dark-gray);
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 #main {
@@ -92,15 +106,18 @@ body {
   color: var(--offwhite-blue);
   font-family: "Life Savers";
   font-size: 4rem;
+  
+  /* Bump down so the all-caps text looks more centered. */
   position: relative;
   top: .3rem;
 }
 
 .photo-credit {
-  position: absolute;
-  bottom: 20px;
   color: var(--offwhite-blue);
   font-size: .8rem;
+  
+  position: absolute;
+  bottom: 1.5rem;
   
   width: 100%;
   text-align: center;
@@ -111,14 +128,133 @@ body {
   flex-direction: column;
 }
 
-#form-area {
-  height: 500px;
-  background-color: teal;
-
-  flex: none;
+#form-area > h2 {
+  margin-bottom: 40px;
 }
 
 #main-right-top,
 #main-right-bottom {
   flex: auto;
+
+  padding: var(--section-padding);
+
+  background-color: var(--offwhite-very-pale-blue);
+}
+
+#form-area {
+  background-color: white;
+  padding: var(--section-padding);
+
+  flex: none;
+
+  box-shadow: 0 10px 15px var(--gray-shadow);
+  /* lift the z-index so the shadow isn't covered by the next box  */
+  position: relative;
+  z-index: 1;
+}
+
+.hype {
+  font-weight: 600;
+  font-size: 1.6rem;
+}
+
+.guide-text {
+  font-size: 1.3rem;
+}
+
+.form-row {
+  display: flex;
+  gap: 80px;
+}
+
+.form-row:has(+ .form-row) {
+  margin-bottom: 30px;
+}
+
+.form-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-item label {
+  /* font-family:'Courier New', Courier, monospace; */
+  letter-spacing: .13rem;
+  font-size: .8rem;
+}
+
+.form-item input {
+  padding: .35rem .3rem;
+  width: 18rem;
+  border: 1px solid var(--offwhite-blue);
+  border-radius: 5px;
+}
+
+.form-item input:focus {
+  outline: none;
+  
+  border-color: var(--focused-blue);
+  box-shadow: 3px 3px 3px var(--gray-shadow);
+}
+
+.form-item input:user-invalid {
+  border-color: var(--invalid-red);
+}
+
+#error-message {
+  color: var(--invalid-red);
+}
+
+.push-items-down {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+button {
+  margin-bottom: 30px;
+}
+
+a {
+  text-decoration: none;
+  color: var(--ocean-blue-bright);
+}
+
+a:hover,
+a:active {
+  text-decoration: underline;
+}
+
+a:active {
+  color: var(--ocean-blue-light);
+}
+
+a:visited {
+  color: var(--ocean-blue-gray);
+}
+
+button {
+  width: 16rem;
+  height: 3.5rem; 
+  
+  border: none;
+  /* border: 1px solid var(--ocean-blue-gray); */
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: bold;
+  background-color: var(--ocean-blue-deep);
+  color: var(--offwhite);
+  box-shadow: 3px 3px 2px var(--gray-shadow);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: var(--ocean-blue-bright);
+}
+
+button:active {
+  background-color: var(--ocean-blue-gray);
 }

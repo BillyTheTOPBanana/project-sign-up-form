@@ -25,19 +25,65 @@
             </div>
         </div>
         <div id="main-right">
-            <div id="main-right-top">
-                lorem ipsum dolor sit amet consectetur adipiscing elit est deleniti cupiditate dolor labore et in corrupti exercitation dolor aliquip occaecat veniam non lorem id ut similique possimus quo distinctio occaecat laboris ullamco incididunt quibusdam harum et proident commodo ducimus dolores culpa nulla fugiat quas cillum exercitation minim veniam occaecat et
+            <div id="main-right-top" class="hype push-items-down">
+                <p>
+                    This is not a real online service! That's why you should do it! You can fulfill your burning desire to stomp out FOMO and be a part of the action, without any of the risks! Keep your data to yourself! Sign up to this non-existent service  <em>now</em> to get started.
+                    <br><br>
+                    You <em>know</em> you will.
+                </p>
             </div>
             <div id="form-area">
-                <input type="text">
-                <input type="text">
-                <input type="text">
-                <input type="text">
+                <h2 class="hype">Let's do this!</h2>
+                <form id="signup-form" action="https://httpbin.org/post" method="post">
+                    <div class="form-row">
+                        <div class="form-item">
+                            <label for="first-name">FIRST NAME</label>
+                            <input type="text" id="first-name" name="first_name"
+                                placeholder="First"
+                                required maxlength="30">
+                        </div>
+                        <div class="form-item">
+                            <label for="last-name">LAST NAME</label>
+                            <input type="text" id="last-name" name="last_name"
+                                placeholder="Last"
+                                maxlength="30">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-item">
+                            <label for="email">EMAIL</label>
+                            <input type="email" id="email" name="email" 
+                                placeholder="your@email.com" 
+                                required pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$">
+                        </div>
+                        <div class="form-item">
+                            <label for="phone-number">PHONE NUMBER</label>
+                            <input type="telephone" id="phone-number" name="phone_number" 
+                                placeholder="123-456-7890" 
+                                maxlength="16"
+                                pattern="^(\+[1-9])?[0-9\-]{1,14}$">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-item">
+                            <label for="password">PASSWORD</label>
+                            <input type="password" id="password" name="password" 
+                                placeholder="********" 
+                                required minlength="8">
+                        </div>
+                        <div class="form-item">
+                            <label for="confirm-password">CONFIRM PASSWORD</label>
+                            <input type="password" id="confirm-password" 
+                                placeholder="********"
+                                required minlength="8">
+                        </div>
+                    </div>
+                    <p id="error-message"></p>
+                </form>
             </div>
             <div id="main-right-bottom">
-                <button>GIVE ME YOUR INFO</button>
-                <br>
-                lorem ipsum dolor sit amet consectetur adipiscing elit est deleniti cupiditate dolor labore et in corrupti exercitation dolor aliquip occaecat veniam non lorem id ut similique possimus quo distinctio occaecat laboris ullamco incididunt quibusdam harum et proident commodo ducimus dolores culpa nulla fugiat quas cillum exercitation minim veniam occaecat et
+                <button form="signup-form">Create Account</button>
+                <p class="guide-text">Already have an account? <a href="https://example.com">Log in</a></p>
             </div>
         </div>
 
