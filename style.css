@@ -6,51 +6,15 @@
   --ocean-blue-gray: hsl(191, 58%, 38%);
   --ocean-blue-bright: hsl(191, 88%, 50%);
   --ocean-blue-deep: hsl(195, 100%, 20%);
-  --fishy-orange: hsl(30 100% 45%);
-  --offwhite-blue: hsl(222 50% 91%);
   --focused-blue:  hsl(222 75% 30%);
   --invalid-red: hsl(0 95% 70%);
+  --fishy-orange: hsl(30 100% 45%);
+  --offwhite-blue: hsl(222 50% 91%);
   --offwhite-very-pale-blue: hsl(222 50% 98%);
   --offwhite: hsl(0 0 97%);
   --gray-shadow: hsl(0 0 60% / .3);
 
   --section-padding: 40px;
-}
-
-.pompiere-regular {
-  font-family: "Pompiere", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.huninn-regular {
-  font-family: "Huninn", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.life-savers-regular {
-  font-family: "Life Savers", serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.life-savers-bold {
-  font-family: "Life Savers", serif;
-  font-weight: 700;
-  font-style: normal;
-}
-
-.life-savers-extrabold {
-  font-family: "Life Savers", serif;
-  font-weight: 800;
-  font-style: normal;
-}
-
-.asimovian-regular {
-  font-family: "Asimovian", sans-serif;
-  font-weight: 400;
-  font-style: normal;
 }
 
 body {
@@ -134,7 +98,7 @@ body {
 
 #main-right-top,
 #main-right-bottom {
-  flex: auto;
+  flex: 1;
 
   padding: var(--section-padding);
 
@@ -177,7 +141,6 @@ body {
 }
 
 .form-item label {
-  /* font-family:'Courier New', Courier, monospace; */
   letter-spacing: .13rem;
   font-size: .8rem;
 }
@@ -237,7 +200,6 @@ button {
   height: 3.5rem; 
   
   border: none;
-  /* border: 1px solid var(--ocean-blue-gray); */
   border-radius: 10px;
   font-size: 1rem;
   font-weight: bold;
@@ -252,9 +214,9 @@ button {
 
 button:hover {
   cursor: pointer;
-  background-color: var(--ocean-blue-bright);
+  background-color: var(--ocean-blue-gray);
 }
 
 button:active {
-  background-color: var(--ocean-blue-gray);
+  background-color: var(--ocean-blue-bright);
 }
